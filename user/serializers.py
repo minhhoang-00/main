@@ -9,8 +9,12 @@ class getAllUser(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class setUser(serializers.Serializer):
+class Login(serializers.Serializer):
     email = serializers.EmailField()
-    password = serializers.CharField(max_length=20)
-    fullname = serializers.CharField(max_length=255)
-    phonenumber = serializers.IntegerField(default=0)
+    matkhau = serializers.CharField(max_length=20)
+
+class register(serializers.Serializer):
+    email = serializers.EmailField()
+    matkhau = serializers.CharField(max_length=20)
+    bienso = serializers.CharField(max_length=20)
+    loaixe = serializers.IntegerField(default=0)

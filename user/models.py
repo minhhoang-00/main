@@ -4,6 +4,13 @@ from django.db import models
 
 class user(models.Model):
     email = models.EmailField()
-    password = models.CharField(max_length=20)
-    fullname = models.CharField(max_length=255)
-    phonenumber = models.IntegerField(default=0)
+    matkhau = models.CharField(max_length=20, blank=True)
+    hoten = models.CharField(max_length=255, blank=True)
+    gioitinh = models.IntegerField(default=0, blank=True)
+    quequan = models.CharField(max_length=20, blank=True)
+    dienthoai = models.IntegerField(default=0, blank=True)
+    luotdatcho = models.IntegerField(default=0, blank=True)
+    luothuy = models.IntegerField(default=0, blank=True)
+    thongbao = models.CharField(max_length=255, blank=True),
+    bienso = models.CharField(max_length=20, blank=True)
+    loaixe = models.IntegerField(default=0, blank=True)
